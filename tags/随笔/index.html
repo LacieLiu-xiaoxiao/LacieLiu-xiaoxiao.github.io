@@ -6,26 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>SpringBoot-RabbitMQ实现手动Consumer-Ack | iLacieLiu&#39;s Blog</title>
+  <title>Tag: 随笔 | iLacieLiu&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、Consumer Ack的三种方式  (1)、自动确认：acknowledge &#x3D; “none”,这是默认的方式,如果不配置的话,默认就是自动确认,消费方从消息队列中拿出消息后,消息队列中都会清除掉这条消息(不安全).   (2)、手动确认：acknowledge &#x3D; “manual”,手动确认就是当消费者取出来消息其后的操作正常执行后,返回给消息队列,让其清除该条消息;如果后续执行有异常,可">
-<meta property="og:type" content="article">
-<meta property="og:title" content="SpringBoot-RabbitMQ实现手动Consumer-Ack">
-<meta property="og:url" content="http://yoursite.com/2020/05/09/SpringBoot%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%80%E4%B8%AA%E5%90%AF%E5%8A%A8%E7%B1%BBstarter/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="iLacieLiu&#39;s Blog">
+<meta property="og:url" content="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/index.html">
 <meta property="og:site_name" content="iLacieLiu&#39;s Blog">
-<meta property="og:description" content="一、Consumer Ack的三种方式  (1)、自动确认：acknowledge &#x3D; “none”,这是默认的方式,如果不配置的话,默认就是自动确认,消费方从消息队列中拿出消息后,消息队列中都会清除掉这条消息(不安全).   (2)、手动确认：acknowledge &#x3D; “manual”,手动确认就是当消费者取出来消息其后的操作正常执行后,返回给消息队列,让其清除该条消息;如果后续执行有异常,可">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200408225022444.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0xvdmVMYWNpZQ==,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200408225114206.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200408225452373.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0xvdmVMYWNpZQ==,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200408225803501.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200408225936559.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0xvdmVMYWNpZQ==,size_16,color_FFFFFF,t_70">
-<meta property="article:published_time" content="2020-05-09T08:50:07.000Z">
-<meta property="article:modified_time" content="2020-05-09T10:26:45.677Z">
 <meta property="article:author" content="愿与终">
-<meta property="article:tag" content="spring-boot">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200408225022444.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0xvdmVMYWNpZQ==,size_16,color_FFFFFF,t_70">
   
     <link rel="alternative" href="/atom.xml" title="iLacieLiu&#39;s Blog" type="application/atom+xml">
   
@@ -155,187 +144,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-SpringBoot自定义一个启动类starter" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      SpringBoot-RabbitMQ实现手动Consumer-Ack
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2020/05/09/%E6%97%B6%E5%85%89%E8%BF%9F%E6%9A%AE%E4%B8%8D%E8%BF%94-%E4%BA%BA%E7%94%9F%E5%B7%B2%E4%B8%8D%E5%86%8D%E6%9D%A5/" class="archive-article-date">
+  	<time datetime="2020-05-09T12:10:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-09</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/05/09/%E6%97%B6%E5%85%89%E8%BF%9F%E6%9A%AE%E4%B8%8D%E8%BF%94-%E4%BA%BA%E7%94%9F%E5%B7%B2%E4%B8%8D%E5%86%8D%E6%9D%A5/">时光迟暮不返,人生已不再来</a>
     </h1>
   
 
-        
-        <a href="/2020/05/09/SpringBoot%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%80%E4%B8%AA%E5%90%AF%E5%8A%A8%E7%B1%BBstarter/" class="archive-article-date">
-  	<time datetime="2020-05-09T08:50:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="一、Consumer-Ack的三种方式"><a href="#一、Consumer-Ack的三种方式" class="headerlink" title="一、Consumer Ack的三种方式"></a>一、Consumer Ack的三种方式</h3><p>  (1)、自动确认：acknowledge = “none”,这是默认的方式,如果不配置的话,默认就是自动确认,消费方从消息队列中拿出消息后,消息队列中都会清除掉这条消息(不安全).</p>
-<p>  (2)、手动确认：acknowledge = “manual”,手动确认就是当消费者取出来消息其后的操作正常执行后,返回给消息队列,让其清除该条消息;如果后续执行有异常,可以设置requeue=true返回其消息队列,再让其消息队列重新给消费者发送消息.</p>
-<p>  (3)、根据异常情况确认(很麻烦)：acknowledge = “auto”.</p>
-<a id="more"></a>
-
-<h3 id="二、进入主题-SpringBoot-RabbitMQ实现手动Consumer-Ack"><a href="#二、进入主题-SpringBoot-RabbitMQ实现手动Consumer-Ack" class="headerlink" title="二、进入主题:SpringBoot+RabbitMQ实现手动Consumer Ack"></a>二、进入主题:SpringBoot+RabbitMQ实现手动Consumer Ack</h3><h4 id="1、pom文件中导入依赖坐标"><a href="#1、pom文件中导入依赖坐标" class="headerlink" title="1、pom文件中导入依赖坐标"></a>1、pom文件中导入依赖坐标</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-boot-starter-amqp&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
-
-<h4 id="2、在生产者与消费者工程yml配置文件中开启手动Ack"><a href="#2、在生产者与消费者工程yml配置文件中开启手动Ack" class="headerlink" title="2、在生产者与消费者工程yml配置文件中开启手动Ack"></a>2、在生产者与消费者工程yml配置文件中开启手动Ack</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">rabbitmq:</span></span><br><span class="line">    <span class="attr">host:</span> <span class="number">192.168</span><span class="number">.253</span><span class="number">.128</span> <span class="comment">#ip</span></span><br><span class="line">    <span class="attr">username:</span> <span class="string">guest</span></span><br><span class="line">    <span class="attr">password:</span> <span class="string">guest</span></span><br><span class="line">    <span class="attr">virtual-host:</span> <span class="string">/</span></span><br><span class="line">    <span class="attr">port:</span> <span class="number">5672</span></span><br><span class="line">    <span class="attr">listener:</span></span><br><span class="line">      <span class="attr">simple:</span></span><br><span class="line">        <span class="attr">acknowledge-mode:</span> <span class="string">manual</span> <span class="comment">#开启手动Ack</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="3、在生产者工程中创建一个配置类声明队列与交换机的关系"><a href="#3、在生产者工程中创建一个配置类声明队列与交换机的关系" class="headerlink" title="3、在生产者工程中创建一个配置类声明队列与交换机的关系"></a>3、在生产者工程中创建一个配置类声明队列与交换机的关系</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> org.springframework.amqp.core.*;</span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Qualifier;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Bean;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RabbitMQConfig</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//交换机的名称；</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String DIRECT_EXCHANGE_NAME = <span class="string">"direct_boot_exchange"</span>;</span><br><span class="line">    <span class="comment">//队列名称；</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String DIRECT_QUEUE_NAME = <span class="string">"direct_boot_queue"</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 声明交换机,在以后我们会定义多个交换机，</span></span><br><span class="line"><span class="comment">     * 所以给这个注入的Bean起一个名字，同理在绑定的时候用<span class="doctag">@Qualifier</span>注解；</span></span><br><span class="line"><span class="comment">     * durablie：持久化</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span>(<span class="string">"directExchange"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Exchange <span class="title">directExchange</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> ExchangeBuilder.directExchange(DIRECT_EXCHANGE_NAME).durable(<span class="keyword">true</span>).build();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//声明队列；</span></span><br><span class="line">    <span class="meta">@Bean</span>(<span class="string">"directQueue"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Queue <span class="title">testQueue</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> QueueBuilder.durable(DIRECT_QUEUE_NAME).build();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//绑定交换机和队列,把上述声明的交换机、队列作为参数传入进来；</span></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Binding <span class="title">bindDirectExchangeQueue</span><span class="params">(@Qualifier(<span class="string">"directQueue"</span>)</span> Queue queue,</span></span><br><span class="line"><span class="function">                                           @<span class="title">Qualifier</span><span class="params">(<span class="string">"directExchange"</span>)</span> Exchange exchange)</span>&#123;</span><br><span class="line">                                           </span><br><span class="line">        <span class="keyword">return</span> BindingBuilder.bind(queue).to(exchange).with(<span class="string">"info"</span>).noargs();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="4、在消费者工程中创建一个组件监听在生产者声明的队列"><a href="#4、在消费者工程中创建一个组件监听在生产者声明的队列" class="headerlink" title="4、在消费者工程中创建一个组件监听在生产者声明的队列"></a>4、在消费者工程中创建一个组件监听在生产者声明的队列</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> com.rabbitmq.client.Channel;</span><br><span class="line"><span class="keyword">import</span> org.springframework.amqp.rabbit.annotation.RabbitListener;</span><br><span class="line"><span class="keyword">import</span> org.springframework.amqp.support.AmqpHeaders;</span><br><span class="line"><span class="keyword">import</span> org.springframework.messaging.handler.annotation.Header;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Component;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyAckListener</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> message 队列中的消息;</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> channel 当前的消息队列;</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> tag 取出来当前消息在队列中的的索引,</span></span><br><span class="line"><span class="comment">     * 用这个<span class="doctag">@Header</span>(AmqpHeaders.DELIVERY_TAG)注解可以拿到;</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> IOException</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line"></span><br><span class="line">    <span class="meta">@RabbitListener</span>(queues = <span class="string">"direct_boot_queue"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">myAckListener</span><span class="params">(String message, Channel channel, @Header(AmqpHeaders.DELIVERY_TAG)</span> <span class="keyword">long</span> tag) <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line"></span><br><span class="line">        System.out.println(message);</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line"></span><br><span class="line">            <span class="comment">/**</span></span><br><span class="line"><span class="comment">             * 无异常就确认消息</span></span><br><span class="line"><span class="comment">             * basicAck(long deliveryTag, boolean multiple)</span></span><br><span class="line"><span class="comment">             * deliveryTag:取出来当前消息在队列中的的索引;</span></span><br><span class="line"><span class="comment">             * multiple:为true的话就是批量确认,如果当前deliveryTag为5,那么就会确认</span></span><br><span class="line"><span class="comment">             * deliveryTag为5及其以下的消息;一般设置为false</span></span><br><span class="line"><span class="comment">             */</span></span><br><span class="line">            channel.basicAck(tag, <span class="keyword">false</span>);</span><br><span class="line">        &#125;<span class="keyword">catch</span> (Exception e)&#123;</span><br><span class="line">            <span class="comment">/**</span></span><br><span class="line"><span class="comment">             * 有异常就绝收消息</span></span><br><span class="line"><span class="comment">             * basicNack(long deliveryTag, boolean multiple, boolean requeue)</span></span><br><span class="line"><span class="comment">             * requeue:true为将消息重返当前消息队列,还可以重新发送给消费者;</span></span><br><span class="line"><span class="comment">             *         false:将消息丢弃</span></span><br><span class="line"><span class="comment">             */</span></span><br><span class="line">            channel.basicNack(tag,<span class="keyword">false</span>,<span class="keyword">true</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="5、在生产者中创建一个测试类来发送消息"><a href="#5、在生产者中创建一个测试类来发送消息" class="headerlink" title="5、在生产者中创建一个测试类来发送消息"></a>5、在生产者中创建一个测试类来发送消息</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> com.itlw.config.RabbitMQConfig;</span><br><span class="line"><span class="keyword">import</span> org.junit.Test;</span><br><span class="line"><span class="keyword">import</span> org.junit.runner.RunWith;</span><br><span class="line"><span class="keyword">import</span> org.springframework.amqp.rabbit.core.RabbitTemplate;</span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.test.context.SpringBootTest;</span><br><span class="line"><span class="keyword">import</span> org.springframework.test.context.junit4.SpringRunner;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@RunWith</span>(SpringRunner<span class="class">.<span class="keyword">class</span>)</span></span><br><span class="line"><span class="class">@<span class="title">SpringBootTest</span></span></span><br><span class="line"><span class="class"><span class="title">public</span> <span class="title">class</span> <span class="title">ProducedTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//从IOC容器中拿模板类；</span></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> RabbitTemplate rabbitTemplate;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">//发送消息；</span></span><br><span class="line">        rabbitTemplate.convertAndSend(RabbitMQConfig.DIRECT_EXCHANGE_NAME,</span><br><span class="line">                <span class="string">"info"</span>,<span class="string">"这是一条测试消息...."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="5、启动消费者工程来接收此队列的消息"><a href="#5、启动消费者工程来接收此队列的消息" class="headerlink" title="5、启动消费者工程来接收此队列的消息"></a>5、启动消费者工程来接收此队列的消息</h4><p>可以看到控制台输出了接收到的消息,并且因为已经被确认,所以队列中消息已经为0,要测出效果,手动添加一个异常.<br><img src="https://img-blog.csdnimg.cn/20200408225022444.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0xvdmVMYWNpZQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p><img src="https://img-blog.csdnimg.cn/20200408225114206.png" alt="在这里插入图片描述"></p>
-<h4 id="6、手动添加一个异常"><a href="#6、手动添加一个异常" class="headerlink" title="6、手动添加一个异常"></a>6、手动添加一个异常</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">           <span class="comment">/**</span></span><br><span class="line"><span class="comment">            * 无异常就确认消息</span></span><br><span class="line"><span class="comment">            * basicAck(long deliveryTag, boolean multiple)</span></span><br><span class="line"><span class="comment">            * deliveryTag:取出来当前消息在队列中的的索引;</span></span><br><span class="line"><span class="comment">            * multiple:为true的话就是批量确认,如果当前deliveryTag为5,那么就会确认</span></span><br><span class="line"><span class="comment">            * deliveryTag为5及其以下的消息;一般设置为false</span></span><br><span class="line"><span class="comment">            */</span></span><br><span class="line">           <span class="keyword">int</span> i = <span class="number">3</span> / <span class="number">0</span>;<span class="comment">//手动添加异常</span></span><br><span class="line">           channel.basicAck(tag, <span class="keyword">false</span>);</span><br><span class="line">       &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">           <span class="comment">/**</span></span><br><span class="line"><span class="comment">            * 有异常就绝收消息</span></span><br><span class="line"><span class="comment">            * basicNack(long deliveryTag, boolean multiple, boolean requeue)</span></span><br><span class="line"><span class="comment">            * requeue:true为将消息重返当前消息队列,还可以重新发送给消费者;</span></span><br><span class="line"><span class="comment">            *         false:将消息丢弃</span></span><br><span class="line"><span class="comment">            */</span></span><br><span class="line">           channel.basicNack(tag, <span class="keyword">false</span>, <span class="keyword">true</span>);</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="7、再次运行看结果"><a href="#7、再次运行看结果" class="headerlink" title="7、再次运行看结果"></a>7、再次运行看结果</h4><p>我设置了 channel.basicNack(tag, false, true);第三个requeue属性为true由队列又重新发送给消费者,消费者接收到消息后确认之前遇到了错误又重新拒收消息……所以进入了一个死循环<br><img src="https://img-blog.csdnimg.cn/20200408225452373.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0xvdmVMYWNpZQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>等暂停运行后,可以看到消息队列中还剩一条消息,就是消费者绝收的这条消息,如果把requeue设置为false,那么这个队列中将没有这条消息.<br><img src="https://img-blog.csdnimg.cn/20200408225803501.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200408225936559.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0xvdmVMYWNpZQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring-boot</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/09/SpringBoot%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%80%E4%B8%AA%E5%90%AF%E5%8A%A8%E7%B1%BBstarter/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2020/05/09/%E5%AE%9E%E9%AA%8C%E6%96%87%E7%AB%A0/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          测试文章
-        
-      </div>
-    </a>
   
   
-    <a href="/2020/05/09/SpringBoot-RabbitMQ%E5%AE%9E%E7%8E%B0%E6%89%8B%E5%8A%A8Consumer-Ack/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">SpringBoot自定义一个启动类starter</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、Consumer-Ack的三种方式"><span class="toc-number">1.</span> <span class="toc-text">一、Consumer Ack的三种方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、进入主题-SpringBoot-RabbitMQ实现手动Consumer-Ack"><span class="toc-number">2.</span> <span class="toc-text">二、进入主题:SpringBoot+RabbitMQ实现手动Consumer Ack</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、pom文件中导入依赖坐标"><span class="toc-number">2.1.</span> <span class="toc-text">1、pom文件中导入依赖坐标</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、在生产者与消费者工程yml配置文件中开启手动Ack"><span class="toc-number">2.2.</span> <span class="toc-text">2、在生产者与消费者工程yml配置文件中开启手动Ack</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3、在生产者工程中创建一个配置类声明队列与交换机的关系"><span class="toc-number">2.3.</span> <span class="toc-text">3、在生产者工程中创建一个配置类声明队列与交换机的关系</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4、在消费者工程中创建一个组件监听在生产者声明的队列"><span class="toc-number">2.4.</span> <span class="toc-text">4、在消费者工程中创建一个组件监听在生产者声明的队列</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5、在生产者中创建一个测试类来发送消息"><span class="toc-number">2.5.</span> <span class="toc-text">5、在生产者中创建一个测试类来发送消息</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5、启动消费者工程来接收此队列的消息"><span class="toc-number">2.6.</span> <span class="toc-text">5、启动消费者工程来接收此队列的消息</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6、手动添加一个异常"><span class="toc-number">2.7.</span> <span class="toc-text">6、手动添加一个异常</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7、再次运行看结果"><span class="toc-number">2.8.</span> <span class="toc-text">7、再次运行看结果</span></a></li></ol></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -358,9 +220,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
