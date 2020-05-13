@@ -6,14 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://lacieliu-xiaoxiao.github.io">
-  <title>iLacieLiu&#39;s Blog</title>
+  <title>SpringCloud面试 | iLacieLiu&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="iLacieLiu&#39;s Blog">
-<meta property="og:url" content="https://lacieliu-xiaoxiao.github.io/index.html">
+  <meta name="description" content="一、什么是微服务？​    就目前而言，对于微服务业界并没有一个统一的、标准的定义。但通常而言，微服务架构是一种架构模式或者说是一种架构分各个，它提供将单一的应用程序划分成一组小的服务，每个服务运行在其独立的自己的进程中，服务之间互相协调、互相配合，为用户提供最终价值。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SpringCloud面试">
+<meta property="og:url" content="https://lacieliu-xiaoxiao.github.io/2020/05/13/SpringCloud%E9%9D%A2%E8%AF%95/index.html">
 <meta property="og:site_name" content="iLacieLiu&#39;s Blog">
+<meta property="og:description" content="一、什么是微服务？​    就目前而言，对于微服务业界并没有一个统一的、标准的定义。但通常而言，微服务架构是一种架构模式或者说是一种架构分各个，它提供将单一的应用程序划分成一组小的服务，每个服务运行在其独立的自己的进程中，服务之间互相协调、互相配合，为用户提供最终价值。">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-05-13T02:37:45.000Z">
+<meta property="article:modified_time" content="2020-05-13T08:13:50.487Z">
 <meta property="article:author" content="愿与终">
+<meta property="article:tag" content="SpringCloud">
+<meta property="article:tag" content="面试">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="iLacieLiu&#39;s Blog" type="application/atom+xml">
@@ -154,16 +160,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-SpringCloud面试" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-SpringCloud面试" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/13/SpringCloud%E9%9D%A2%E8%AF%95/">SpringCloud面试</a>
+    <h1 class="article-title" itemprop="name">
+      SpringCloud面试
     </h1>
   
 
@@ -176,10 +180,61 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="一、什么是微服务？"><a href="#一、什么是微服务？" class="headerlink" title="一、什么是微服务？"></a>一、什么是微服务？</h2><p>​    就目前而言，对于微服务业界并没有一个统一的、标准的定义。但通常而言，<strong>微服务架构是一种架构模式或者说是一种架构分各个，它提供将单一的应用程序划分成一组小的服务，每个服务运行在其独立的自己的进程中，服务之间互相协调、互相配合，为用户提供最终价值</strong>。
-        
-          <a class="article-more-a" href="/2020/05/13/SpringCloud%E9%9D%A2%E8%AF%95/#more">more >></a>
-        
+        <h2 id="一、什么是微服务？"><a href="#一、什么是微服务？" class="headerlink" title="一、什么是微服务？"></a>一、什么是微服务？</h2><p>​    就目前而言，对于微服务业界并没有一个统一的、标准的定义。但通常而言，<strong>微服务架构是一种架构模式或者说是一种架构分各个，它提供将单一的应用程序划分成一组小的服务，每个服务运行在其独立的自己的进程中，服务之间互相协调、互相配合，为用户提供最终价值</strong>。<a id="more"></a>服务之间采用轻量级的铜芯机制互相沟通（通常是基于Http协议的Rest ful api）。每个服务都围绕着具体业务进行构建，并且能够独立地部署到生产环境；对于每个具体的微服务而言，可以选择不同的适合的语言、工具进行构建，也可以使用不同的数据存储。</p>
+<hr>
+<h2 id="二、微服务架构跟单体架构的区别"><a href="#二、微服务架构跟单体架构的区别" class="headerlink" title="二、微服务架构跟单体架构的区别"></a>二、微服务架构跟单体架构的区别</h2><p>  ​    从微服务架构的优劣势来说一下与单体架构的区别</p>
+<p>  ​    优势：</p>
+<ul>
+<li><p>微服务按照功能模块进行细粒度的拆分，服务之间松耦合。</p>
+</li>
+<li><p>可以独立部署运维，互不干扰。</p>
+</li>
+<li><p>可以针对性的加强某个服务的提供能力。</p>
+</li>
+<li><p>使用http协议，各个服务的开发语言没有限制。</p>
+<p>  劣势：</p>
+</li>
+</ul>
+<ul>
+<li><p>增加了运维部署成本。</p>
+</li>
+<li><p>开发技术难度增大了。</p>
+</li>
+<li><p>伴随而来的微服务架构的相关问题，需要对应的解决方案：（分布式事务、分布式锁、服务间通信问题。保证服务的高可用、一致性的问题…..）</p>
+</li>
+</ul>
+<hr>
+<h2 id="三、SpringCloud和Dubbo有哪些区别？"><a href="#三、SpringCloud和Dubbo有哪些区别？" class="headerlink" title="三、SpringCloud和Dubbo有哪些区别？"></a>三、SpringCloud和Dubbo有哪些区别？</h2><p>​    本质区别：Duboo是基于 RPC远程过程调用，而SpringCloud是基于Http Rest ful api调用。</p>
+<p>​    SpirngCloud的功能比Dubbo更加强大，涵盖面更广，而且作为Spirng的拳头项目，它能够与SpringBoot、SpringData这样的框架项目完美融合，这些对于微服务而言都是至关重要的。使用Dubbo构建的微服务架构就像组装电脑，各环节我们的选择自由度很高，但是最终结果很有可能因为一条内存的质量不行就点不亮，总是让人不怎么放心，但是如果你是一名高手，那这些不是问题；而SpringCloud就像品牌机，在Spring Source的整合下,做了大量的兼容性测试，保证了机器拥有更高的稳定性，但是如果要使用非原装组件外的东西，就需要对其基础有足够的了解。</p>
+<hr>
+<h2 id="四、SpringBoot和SpringCloud的理解。"><a href="#四、SpringBoot和SpringCloud的理解。" class="headerlink" title="四、SpringBoot和SpringCloud的理解。"></a>四、SpringBoot和SpringCloud的理解。</h2><p>​    SpringBoot是一个快速整合的第三方框架， 关注的事微观，具体关注快速方便的开发单个个体的服务。</p>
+<p>​    SpringCloud关注的是宏观，是具体关注全局的微服务协调整理的治理框架，将SpringBoot开发的一个个微服务整合并管理起来。</p>
+<p>​    举个例子：一个医院 SpringBoot是一个一个的科室，SpringCloud是把一个一个的科室组合起来，对外成为医院。</p>
+<p>​    SpringCloud离不开SpringBoot。</p>
+<hr>
+<h2 id="五、Eureka和Zookeeper都可以提供服务注册与发现的功能，两个的区别是什么？"><a href="#五、Eureka和Zookeeper都可以提供服务注册与发现的功能，两个的区别是什么？" class="headerlink" title="五、Eureka和Zookeeper都可以提供服务注册与发现的功能，两个的区别是什么？"></a>五、Eureka和Zookeeper都可以提供服务注册与发现的功能，两个的区别是什么？</h2><ul>
+<li><p>首先Zookeeper保证的是CP（一致性C(Consistency)），Eureka保证是AP（可用性 A(Availability)）。</p>
+<p>Zookeeper在选举期间注册的服务瘫痪，虽然服务最终会恢复，但是选举期间是不可用的（保证一致性）；Eureka各个节点是平等关系，几个节点挂掉不会影响正常节点的工作，只要一台Eureka就可以保证服务可用，而查询到的数据并不是最新的（保证服务的可用性）。</p>
+<p>因此，Eureka可以很好的应对因网络故障导致部分节点市区联系的情况，而不会像Zookeeper那样使整个注册服务瘫痪。</p>
+</li>
+<li><p>Zookeeper有Leader和Follwer角色，Eureka各个节点平等。</p>
+</li>
+<li><p>Zookeeper采用过半数存活原则，Eureka采用自我保护机制解决分区问题。</p>
+</li>
+<li><p>Eureka本质上是个功能，ZooKeeper只是一个进程。</p>
+</li>
+</ul>
+<hr>
+<h2 id="六、什么是Ribbon？"><a href="#六、什么是Ribbon？" class="headerlink" title="六、什么是Ribbon？"></a>六、什么是Ribbon？</h2><p>​    Ribbon负载均衡，有助于控制Http和Tcp客户端的行为，为Ribbon配置服务提供地址列表后，Ribbon就可基于某种负载均衡算法，自动帮助服务消费者去消费。默认负载均衡算法是轮询，还有随机….我们可以自定义负载均衡算法。</p>
+<hr>
+<h2 id="七、什么是服务熔断和服务降级？（Hystrix）"><a href="#七、什么是服务熔断和服务降级？（Hystrix）" class="headerlink" title="七、什么是服务熔断和服务降级？（Hystrix）"></a>七、什么是服务熔断和服务降级？（Hystrix）</h2><p>​    在复杂的分布式系统中，微服务之间的相互调用，有可能出现各种各样的原因导致服务的阻塞，在高并发场景下，服务的阻塞以为着线程的阻塞，导致当前线程不可用，服务器的线程全部阻塞，导致服务器崩溃，由于服务之间的调用关系时同步的，会对整个微服务系统造成服务雪崩，为了防止级联失败造成的服务雪崩问题必须用到熔断器（Hystix）。</p>
+<ul>
+<li>服务降级：优先保证核心服务，而非核心服务不可用或弱可用。</li>
+</ul>
+<p>​    用户的请求故障时，不会被阻塞，更不会无休止的等待或者看到系统崩溃，至少可以看到一个执行结果（例如返回友好的提示信息）。</p>
+<p>​    服务降级虽然会导致请求失败，但是不会导致阻塞，而且最多会影响这个依赖服务对应的线程池中的资源，对其他服务没有影响。</p>
+<p>​    触发Hystrix服务降级的情况：线程池已满，请求超时。</p>
+
       
 
       
@@ -205,16 +260,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/13/SpringCloud%E9%9D%A2%E8%AF%95/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://lacieliu-xiaoxiao.github.io/2020/05/13/SpringCloud%E9%9D%A2%E8%AF%95/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2020/05/13/SpringMvc%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">SpringMvc的工作原理</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -229,574 +343,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-SpringMvc的工作原理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/13/SpringMvc%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/">SpringMvc的工作原理</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/13/SpringMvc%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/" class="archive-article-date">
-  	<time datetime="2020-05-13T01:04:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>​    面试中谈及到SpringMvc，少不了其工作原理，所以这也是个非常重要的知识点，务必掌握。</p>
-<p>流程如下：</p>
-<ul>
-<li>浏览器发送请求到前端控制器（DispatcherServlet）。</li>
-<li>DispatcherServlet根据请求信息调用HandlerMapping(处理器映射器)，解析请求对应的Handler，并返回一个执行链路。
-        
-          <a class="article-more-a" href="/2020/05/13/SpringMvc%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">面试</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">SpringMvc</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/13/SpringMvc%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、什么是微服务？"><span class="toc-number">1.</span> <span class="toc-text">一、什么是微服务？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、微服务架构跟单体架构的区别"><span class="toc-number">2.</span> <span class="toc-text">二、微服务架构跟单体架构的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、SpringCloud和Dubbo有哪些区别？"><span class="toc-number">3.</span> <span class="toc-text">三、SpringCloud和Dubbo有哪些区别？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、SpringBoot和SpringCloud的理解。"><span class="toc-number">4.</span> <span class="toc-text">四、SpringBoot和SpringCloud的理解。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、Eureka和Zookeeper都可以提供服务注册与发现的功能，两个的区别是什么？"><span class="toc-number">5.</span> <span class="toc-text">五、Eureka和Zookeeper都可以提供服务注册与发现的功能，两个的区别是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#六、什么是Ribbon？"><span class="toc-number">6.</span> <span class="toc-text">六、什么是Ribbon？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#七、什么是服务熔断和服务降级？（Hystrix）"><span class="toc-number">7.</span> <span class="toc-text">七、什么是服务熔断和服务降级？（Hystrix）</span></a></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
   
-    <article id="post-为什么重写equals时必须重写hashCode方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/12/%E4%B8%BA%E4%BB%80%E4%B9%88%E9%87%8D%E5%86%99equals%E6%97%B6%E5%BF%85%E9%A1%BB%E9%87%8D%E5%86%99hashCode%E6%96%B9%E6%B3%95/">为什么重写equals时必须重写hashCode方法?</a>
-    </h1>
   
 
-        
-        <a href="/2020/05/12/%E4%B8%BA%E4%BB%80%E4%B9%88%E9%87%8D%E5%86%99equals%E6%97%B6%E5%BF%85%E9%A1%BB%E9%87%8D%E5%86%99hashCode%E6%96%B9%E6%B3%95/" class="archive-article-date">
-  	<time datetime="2020-05-12T08:29:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>​    这个问题的场景一般在HashSet这类去重集合中，当我们把对象加入HashSet时，会先计算对象的HashCode值来判断对象加入的散列位置，同时会与其它已经放入的hashCode进行比较，如果没有相同的hashCode，那么就不会比较equals方法，直接把对象放入HashSet当中，
-        
-          <a class="article-more-a" href="/2020/05/12/%E4%B8%BA%E4%BB%80%E4%B9%88%E9%87%8D%E5%86%99equals%E6%97%B6%E5%BF%85%E9%A1%BB%E9%87%8D%E5%86%99hashCode%E6%96%B9%E6%B3%95/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">面试</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">java基础知识</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/12/%E4%B8%BA%E4%BB%80%E4%B9%88%E9%87%8D%E5%86%99equals%E6%97%B6%E5%BF%85%E9%A1%BB%E9%87%8D%E5%86%99hashCode%E6%96%B9%E6%B3%95/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-SpringBoot-RabbitMQ实现延迟队列" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/12/SpringBoot-RabbitMQ%E5%AE%9E%E7%8E%B0%E5%BB%B6%E8%BF%9F%E9%98%9F%E5%88%97/">SpringBoot+RabbitMQ实现延迟队列</a>
-    </h1>
   
 
-        
-        <a href="/2020/05/12/SpringBoot-RabbitMQ%E5%AE%9E%E7%8E%B0%E5%BB%B6%E8%BF%9F%E9%98%9F%E5%88%97/" class="archive-article-date">
-  	<time datetime="2020-05-12T04:12:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="一、什么是延迟队列"><a href="#一、什么是延迟队列" class="headerlink" title="一、什么是延迟队列?"></a>一、什么是延迟队列?</h3><p>先来说一下什么是延迟队列,延迟队列就是消息进入队列之后不会立即被消息,只有达到指定时间后,才会被消费.</p>
-<p><img src="https://img-blog.csdnimg.cn/20200408183950426.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0xvdmVMYWNpZQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">
-        
-          <a class="article-more-a" href="/2020/05/12/SpringBoot-RabbitMQ%E5%AE%9E%E7%8E%B0%E5%BB%B6%E8%BF%9F%E9%98%9F%E5%88%97/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringBoot</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">RabbitMQ</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/12/SpringBoot-RabbitMQ%E5%AE%9E%E7%8E%B0%E5%BB%B6%E8%BF%9F%E9%98%9F%E5%88%97/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-spring面试" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/10/spring%E9%9D%A2%E8%AF%95/">Spring面试</a>
-    </h1>
   
 
-        
-        <a href="/2020/05/10/spring%E9%9D%A2%E8%AF%95/" class="archive-article-date">
-  	<time datetime="2020-05-10T12:10:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="一、Spring-IOC-amp-AOP"><a href="#一、Spring-IOC-amp-AOP" class="headerlink" title="一、Spring IOC &amp;AOP"></a>一、Spring IOC &amp;AOP</h2><p>​    谈到spring，离不开IOC与AOP，首先说一下IOC。</p>
-<ul>
-<li><p>IOC</p>
-<p>​    IOC控制反转是一种设计思想，就是将原本在程序中手动创建对象的控制权，交由Spring框架来管理。IOC在其他语言中也有应用，并非Spring特有。
-        
-          <a class="article-more-a" href="/2020/05/10/spring%E9%9D%A2%E8%AF%95/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">面试</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Spring</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/10/spring%E9%9D%A2%E8%AF%95/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-SpringBoot自定义一个启动类starter" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/09/SpringBoot%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%80%E4%B8%AA%E5%90%AF%E5%8A%A8%E7%B1%BBstarter/">SpringBoot-RabbitMQ实现手动Consumer-Ack</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/09/SpringBoot%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%80%E4%B8%AA%E5%90%AF%E5%8A%A8%E7%B1%BBstarter/" class="archive-article-date">
-  	<time datetime="2020-05-09T08:50:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="一、Consumer-Ack的三种方式"><a href="#一、Consumer-Ack的三种方式" class="headerlink" title="一、Consumer Ack的三种方式"></a>一、Consumer Ack的三种方式</h3><p>  (1)、自动确认：acknowledge = “none”,这是默认的方式,如果不配置的话,默认就是自动确认,消费方从消息队列中拿出消息后,消息队列中都会清除掉这条消息(不安全)。</p>
-        
-          <a class="article-more-a" href="/2020/05/09/SpringBoot%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%80%E4%B8%AA%E5%90%AF%E5%8A%A8%E7%B1%BBstarter/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringBoot</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/09/SpringBoot%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%80%E4%B8%AA%E5%90%AF%E5%8A%A8%E7%B1%BBstarter/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-SpringBoot-RabbitMQ实现手动Consumer-Ack" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/09/SpringBoot-RabbitMQ%E5%AE%9E%E7%8E%B0%E6%89%8B%E5%8A%A8Consumer-Ack/">SpringBoot自定义一个启动类starter</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/09/SpringBoot-RabbitMQ%E5%AE%9E%E7%8E%B0%E6%89%8B%E5%8A%A8Consumer-Ack/" class="archive-article-date">
-  	<time datetime="2020-05-09T07:30:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1439363483&auto=1&height=66"></iframe>
-
-<p><strong>如何自定义一个SpringBoot的启动类?步骤如下:</strong>
-        
-          <a class="article-more-a" href="/2020/05/09/SpringBoot-RabbitMQ%E5%AE%9E%E7%8E%B0%E6%89%8B%E5%8A%A8Consumer-Ack/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">SpringBoot</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">RabbitMQ</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/09/SpringBoot-RabbitMQ%E5%AE%9E%E7%8E%B0%E6%89%8B%E5%8A%A8Consumer-Ack/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-I&#39;ll stay with u" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/08/I'll%20stay%20with%20u/">I&#34;ll stay with u</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/08/I'll%20stay%20with%20u/" class="archive-article-date">
-  	<time datetime="2020-05-07T21:20:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="https://img-blog.csdnimg.cn/20200509203407773.png" alt="在这里插入图片描述"></p>
-<p>​    I’ll stay with u, LacieLiu</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">love</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/08/I'll%20stay%20with%20u/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -819,8 +391,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
