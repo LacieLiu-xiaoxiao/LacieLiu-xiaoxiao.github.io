@@ -16,7 +16,7 @@
 <meta property="og:description" content="一、什么是微服务？​    就目前而言，对于微服务业界并没有一个统一的、标准的定义。但通常而言，微服务架构是一种架构模式或者说是一种架构分各个，它提供将单一的应用程序划分成一组小的服务，每个服务运行在其独立的自己的进程中，服务之间互相协调、互相配合，为用户提供最终价值。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-05-13T02:37:45.000Z">
-<meta property="article:modified_time" content="2020-05-13T08:13:50.487Z">
+<meta property="article:modified_time" content="2020-05-14T12:19:28.969Z">
 <meta property="article:author" content="愿与终">
 <meta property="article:tag" content="SpringCloud">
 <meta property="article:tag" content="面试">
@@ -187,6 +187,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="一、什么是微服务？"><a href="#一、什么是微服务？" class="headerlink" title="一、什么是微服务？"></a>一、什么是微服务？</h2><p>​    就目前而言，对于微服务业界并没有一个统一的、标准的定义。但通常而言，<strong>微服务架构是一种架构模式或者说是一种架构分各个，它提供将单一的应用程序划分成一组小的服务，每个服务运行在其独立的自己的进程中，服务之间互相协调、互相配合，为用户提供最终价值</strong>。<a id="more"></a>服务之间采用轻量级的铜芯机制互相沟通（通常是基于Http协议的Rest ful api）。每个服务都围绕着具体业务进行构建，并且能够独立地部署到生产环境；对于每个具体的微服务而言，可以选择不同的适合的语言、工具进行构建，也可以使用不同的数据存储。</p>
+<p>​    补充:什么是SpringCloud?</p>
+<p>​    SpringCloud是一系列框架的有序集合，它利用SpringBoot的开发便利性巧妙地简化了分布式系统基础设施的开发，服务注册与发现、负载均衡、熔断器、消息总线、网关、数据监控等，都可以用SpringBoot的开发风格做到一键启动和部署。SpringCloud并没有重复制造轮子，它只是将各家公司开发的比较成熟、经得起实际考验的服务框架组合起来，通过SpringBoot风格进行封装屏蔽掉了复杂的配置和实现原理，最终给我们开发者留出了一套简单易懂、易部署和易维护的分布式系统开发工具包。</p>
 <hr>
 <h2 id="二、微服务架构跟单体架构的区别"><a href="#二、微服务架构跟单体架构的区别" class="headerlink" title="二、微服务架构跟单体架构的区别"></a>二、微服务架构跟单体架构的区别</h2><p>  ​    从微服务架构的优劣势来说一下与单体架构的区别</p>
 <p>  ​    优势：</p>
@@ -213,8 +215,8 @@
 <h2 id="三、SpringCloud和Dubbo有哪些区别？"><a href="#三、SpringCloud和Dubbo有哪些区别？" class="headerlink" title="三、SpringCloud和Dubbo有哪些区别？"></a>三、SpringCloud和Dubbo有哪些区别？</h2><p>​    本质区别：Duboo是基于 RPC远程过程调用，而SpringCloud是基于Http Rest ful api调用。</p>
 <p>​    SpirngCloud的功能比Dubbo更加强大，涵盖面更广，而且作为Spirng的拳头项目，它能够与SpringBoot、SpringData这样的框架项目完美融合，这些对于微服务而言都是至关重要的。使用Dubbo构建的微服务架构就像组装电脑，各环节我们的选择自由度很高，但是最终结果很有可能因为一条内存的质量不行就点不亮，总是让人不怎么放心，但是如果你是一名高手，那这些不是问题；而SpringCloud就像品牌机，在Spring Source的整合下,做了大量的兼容性测试，保证了机器拥有更高的稳定性，但是如果要使用非原装组件外的东西，就需要对其基础有足够的了解。</p>
 <hr>
-<h2 id="四、SpringBoot和SpringCloud的理解。"><a href="#四、SpringBoot和SpringCloud的理解。" class="headerlink" title="四、SpringBoot和SpringCloud的理解。"></a>四、SpringBoot和SpringCloud的理解。</h2><p>​    SpringBoot是一个快速整合的第三方框架， 关注的事微观，具体关注快速方便的开发单个个体的服务。</p>
-<p>​    SpringCloud关注的是宏观，是具体关注全局的微服务协调整理的治理框架，将SpringBoot开发的一个个微服务整合并管理起来。</p>
+<h2 id="四、SpringBoot和SpringCloud的理解。"><a href="#四、SpringBoot和SpringCloud的理解。" class="headerlink" title="四、SpringBoot和SpringCloud的理解。"></a>四、SpringBoot和SpringCloud的理解。</h2><p>​    SpringBoot是一个快速整合的第三方框架， 关注的是微观，专注于快速方便的开发单个个体微服务。</p>
+<p>​    SpringCloud关注的是宏观，是关注全局的微服务协调整理治理框架，将SpringBoot开发的一个个微服务整合并管理起来。</p>
 <p>​    举个例子：一个医院 SpringBoot是一个一个的科室，SpringCloud是把一个一个的科室组合起来，对外成为医院。</p>
 <p>​    SpringCloud离不开SpringBoot。</p>
 <hr>
@@ -233,7 +235,7 @@
 <hr>
 <h2 id="六、什么是Ribbon？"><a href="#六、什么是Ribbon？" class="headerlink" title="六、什么是Ribbon？"></a>六、什么是Ribbon？</h2><p>​    Ribbon负载均衡，有助于控制Http和Tcp客户端的行为，为Ribbon配置服务提供地址列表后，Ribbon就可基于某种负载均衡算法，自动帮助服务消费者去消费。默认负载均衡算法是轮询，还有随机….我们可以自定义负载均衡算法。</p>
 <hr>
-<h2 id="七、什么是服务熔断和服务降级？（Hystrix）"><a href="#七、什么是服务熔断和服务降级？（Hystrix）" class="headerlink" title="七、什么是服务熔断和服务降级？（Hystrix）"></a>七、什么是服务熔断和服务降级？（Hystrix）</h2><p>​    在复杂的分布式系统中，微服务之间的相互调用，有可能出现各种各样的原因导致服务的阻塞，在高并发场景下，服务的阻塞以为着线程的阻塞，导致当前线程不可用，服务器的线程全部阻塞，导致服务器崩溃，由于服务之间的调用关系时同步的，会对整个微服务系统造成服务雪崩，为了防止级联失败造成的服务雪崩问题必须用到熔断器（Hystix）。</p>
+<h2 id="七、什么是服务熔断和服务降级？（Hystrix）"><a href="#七、什么是服务熔断和服务降级？（Hystrix）" class="headerlink" title="七、什么是服务熔断和服务降级？（Hystrix）"></a>七、什么是服务熔断和服务降级？（Hystrix）</h2><p>​    在复杂的分布式系统中，微服务之间的相互调用，有可能出现当一个服务调用另一个服务由于网络或自身原因出现问题，调用者就会等待被调用者的响应，当更多的服务请求到这些资源导致更多的请求等待就会造成服务雪崩，导致整个系统不可用。为了防止级联失败造成的服务雪崩问题必须用到熔断器（Hystix）。</p>
 <ul>
 <li>服务降级：优先保证核心服务，而非核心服务不可用或弱可用。</li>
 </ul>
@@ -476,14 +478,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">SpringBoot</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">RabbitMQ</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">SpringCloud</a>
               </li>
              
@@ -492,7 +486,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">SpringMvc</a>
+                <a href="javascript:void(0)" class="js-tag color1">SpringBoot</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">RabbitMQ</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -501,6 +499,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">java基础知识</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">SpringMvc</a>
               </li>
             
             <div class="clearfix"></div>
@@ -625,5 +627,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 
 </div>
   </div>
+  <!-- ѩ����Ч2 -->
+
+  <script type="text/javascript" src="/js/snow2.js"></script>
+
+  <!--�������Ц����-->
+
+	<script type="text/javascript" src="/js/FunnyTitle.js"></script>
+
+  
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/Epsilon2.1.model.json"},"display":{"position":"right","width":300,"height":600},"mobile":{"show":false},"rect":"opacity:0.7","log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>
+
